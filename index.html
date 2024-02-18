@@ -1,91 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <head>
+    <title>3d model</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="generator" content="Geany 1.37.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="style.css">
-    <title>Fanta ka website</title>
-</head>
-<body>
-    <div id="loader">
-        <h3>Walchand</h3>
-        <h3>Linux</h3>
-        <h3>Users'</h3>
-        <h3>Group</h3>
-    </div>
-    <div id="main">
-        <nav>
-            <a href="#">Metamorphosis</a>
-            <div class="cntr-nav">
-                <a href="#" onclick="animateFanta()">Docker</a>
-                <a href="#" onclick="animateGo()">Go</a>
-                <a href="#">Register</a>
-                <a href="#">About</a>
-            </div>
-            <i class="ri-menu-fill"></i>
-        </nav>
-        <div class="one">
-            <h1 id="dockerText">DOCKER</h1>
-            <!-- <img id="orange-cut" src="Assets/orange2.png" alt=""> -->
-            <a href="#onetwo"><img id="fanta" src="Assets/docker-img.png" alt=""></a>
-            <!-- <img id="orange" src="Assets/orange.webp" alt="">-->
-            <!-- <img id="leaf" src="Assets/leaf.webp" alt=""> -->
-            <img id="leaf" src="Assets/docker2.png" alt=""> 
-            <!-- <img id="leaf3" src="Assets/coconoutleaf.png" alt="">  -->
-            
+    <link href="style.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet/scss" type="text/scss" href="./styles.scss"> -->
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+    <!--  REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav_elements">
+        <a href="#home"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+            /></svg
+          >Home</a
+        >
+        <a href="#dockerCont"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4 .4 67.6 .1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"
+            /></svg
+          >Docker</a
+        >
+        <a href="#go"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M400.1 194.8C389.2 197.6 380.2 199.1 371 202.4C363.7 204.3 356.3 206.3 347.8 208.5L347.2 208.6C343 209.8 342.6 209.9 338.7 205.4C334 200.1 330.6 196.7 324.1 193.5C304.4 183.9 285.4 186.7 267.7 198.2C246.5 211.9 235.6 232.2 235.9 257.4C236.2 282.4 253.3 302.9 277.1 306.3C299.1 309.1 316.9 301.7 330.9 285.8C333 283.2 334.9 280.5 337 277.5V277.5L337 277.5C337.8 276.5 338.5 275.4 339.3 274.2H279.2C272.7 274.2 271.1 270.2 273.3 264.9C277.3 255.2 284.8 239 289.2 230.9C290.1 229.1 292.3 225.1 296.1 225.1H397.2C401.7 211.7 409 198.2 418.8 185.4C441.5 155.5 468.1 139.9 506 133.4C537.8 127.8 567.7 130.9 594.9 149.3C619.5 166.1 634.7 188.9 638.8 218.8C644.1 260.9 631.9 295.1 602.1 324.4C582.4 345.3 557.2 358.4 528.2 364.3C522.6 365.3 517.1 365.8 511.7 366.3C508.8 366.5 506 366.8 503.2 367.1C474.9 366.5 449 358.4 427.2 339.7C411.9 326.4 401.3 310.1 396.1 291.2C392.4 298.5 388.1 305.6 382.1 312.3C360.5 341.9 331.2 360.3 294.2 365.2C263.6 369.3 235.3 363.4 210.3 344.7C187.3 327.2 174.2 304.2 170.8 275.5C166.7 241.5 176.7 210.1 197.2 184.2C219.4 155.2 248.7 136.8 284.5 130.3C313.8 124.1 341.8 128.4 367.1 145.6C383.6 156.5 395.4 171.4 403.2 189.5C405.1 192.3 403.8 193.9 400.1 194.8zM48.3 200.4C47.1 200.4 46.7 199.8 47.4 198.8L53.9 190.4C54.5 189.5 56.1 188.9 57.3 188.9H168.6C169.8 188.9 170.1 189.8 169.5 190.7L164.2 198.8C163.6 199.8 162 200.7 161.1 200.7L48.3 200.4zM1.2 229.1C0 229.1-.3 228.4 .3 227.5L6.9 219.1C7.5 218.2 9 217.5 10.3 217.5H152.4C153.6 217.5 154.2 218.5 153.9 219.4L151.4 226.9C151.1 228.1 149.9 228.8 148.6 228.8L1.2 229.1zM75.7 255.9C75.1 256.8 75.4 257.7 76.7 257.7L144.6 258C145.5 258 146.8 257.1 146.8 255.9L147.4 248.4C147.4 247.1 146.8 246.2 145.5 246.2H83.2C82 246.2 80.7 247.1 80.1 248.1L75.7 255.9zM577.2 237.9C577 235.3 576.9 233.1 576.5 230.9C570.9 200.1 542.5 182.6 512.9 189.5C483.9 196 465.2 214.4 458.4 243.7C452.8 268 464.6 292.6 487 302.6C504.2 310.1 521.3 309.2 537.8 300.7C562.4 287.1 575.8 268 577.4 241.2C577.3 240 577.3 238.9 577.2 237.9z"
+            /></svg
+          >Go</a
+        >
+        <a href="#register"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+            /></svg
+          >Register</a
+        >
+        <a href="#about"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"
+            /></svg
+          >About us</a
+        >
+      </div>
+    </nav>
+    <div class="containers">
+      <div class="header" id="home">
+        <!-- <img src="./PngItem_2682518.png" alt="Docker Image" id="docker"> -->
+        <p>Metamorphosis</p>
+        <p>2k24</p>
+        <!-- <img src="./pngwing.com (2).png" alt="Gopher Image" id="golang"> -->
+      </div>
+      <div class="go_container" id="go">
+        <model-viewer
+          id="go-model"
+          src="Gopher.glb"
+          alt="A 3D model of a car"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          disable-zoom
+          ar
+        >
+        </model-viewer>
+        <div class="go_session">
+          <div class="go_session1">
+            <h1>Session 1: Let’s Gopher it!</h1>
+            <p>
+              There are a ton of programming languages available! There are so
+              many factors to think about. However, there is a language that
+              everyone should know: GoLang! In this session, we’ll start with
+              this open-source language developed by Google that is currently
+              widely used in the industry and is renowned for its speed,
+              concurrency management, and easy-to-understand syntax. Excited
+              about this new journey and building something mindblowing? Well,
+              let's gopher it!
+            </p>
+          </div>
+          <div class="go_session1">
+            <h1>Session 2: Go Next Level</h1>
+            <p>
+              The base has been built. Weapons have been equipped. Now, with the
+              knowledge of handling this powerful language, in this session,
+              we’ll move towards a very crucial and advanced concept which is
+              concurrency, and ultimately build a project in GoLang. GoLang
+              being cross-platform handles concurrency smoothly like butter.
+              This makes it best suited for developing applications that can
+              handle heavy traffic. Want to know how? We’ll learn about it in
+              this session and Go Next Level!
+            </p>
+          </div>
         </div>
-        <div id="#onetwo" class="one-two">
-            <div class="lft-two">
-                 <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#e04428" d="M41.5,-59.5C49.8,-51.1,49.7,-33.6,50.7,-19.2C51.7,-4.7,53.8,6.7,52.4,18.9C51.1,31.1,46.3,44.1,36.9,52.9C27.6,61.8,13.8,66.5,-2.5,70C-18.8,73.4,-37.7,75.6,-52.5,68.5C-67.3,61.5,-78.2,45.2,-84.5,27.1C-90.9,9,-92.7,-10.8,-80.5,-19.3C-68.3,-27.8,-42.1,-24.8,-26.3,-30.8C-10.6,-36.8,-5.3,-51.7,5.7,-59.5C16.6,-67.3,33.2,-68,41.5,-59.5Z" transform="translate(100 100)" />
-                  </svg>  -->
-            </div>
-            <div class="rght-two">
-                <h1>Docker</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, excepturi sed, itaque placeat id natus soluta veniam obcaecati qui a laborum laboriosam dolorem illum labore sit, voluptates commodi neque dolores tempore temporibus deleniti? Nobis, ratione hic error quis cum neque nulla laudantium nostrum sit nihil dolorum quisquam enim quaerat, eaque ex sequi, harum totam quia non! Labore, neque! Amet voluptatem illo similique recusandae! Ex quaerat quibusdam asperiores, ducimus tempore magni labore. Tenetur voluptas, quos ex repellendus provident mollitia laboriosam adipisci alias a impedit, cum accusamus rerum delectus eaque facilis veniam quia laborum incidunt ea assumenda! Eos magni aspernatur quod distinctio.</p>
-            </div>
+      </div>
+      <div class="docker_container" id="dockerCont">
+        <div class="docker_session">
+          <div class="docker_session1">
+            <h1>Session 1: Dock into Basics</h1>
+            <p>
+              Still thinking of installing an entire operating system to run an
+              application? Stop! Get ready to unlock the potential of Docker and
+              revolutionize your development workflow! This session will provide
+              you with the foundational knowledge you need to thrive in the
+              world of containers. From mastering the art of Docker installation
+              and setup to seamlessly managing Docker images and leveraging
+              powerful registries, you'll emerge confident to tackle any
+              containerization challenge head-on. In this session, we’ll dock
+              into the basics of Docker!
+            </p>
+          </div>
+          <div class="docker_session2">
+            <h1>Session 2: Containers' Harmony</h1>
+            <p>
+              In this season we’ll direct our way towards the advanced Docker
+              techniques! Ever wondered if we can connect multiple Docker
+              containers and manage their dependency on each other? Prepare to
+              be amazed as we explore Docker networking and compose techniques,
+              unraveling the intricacies of container communication and
+              collaboration within complex environments. Throughout this
+              session, we’ll set the containers in harmony like an actual
+              orchestra!
+            </p>
+          </div>
         </div>
-        <div class="two">
-            <h1 id="goText">GO</h1>
-            <!-- Your content for Go section -->
+        <model-viewer
+          id="docker-model"
+          src="docker.glb"
+          alt="A 3D model of a car"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          disable-zoom
+          ar
+        >
+        </model-viewer>
+      </div>
+      <footer class='footer' id="about">
+        <div class='logo-icon-container'>
+          <div class='wlug-logo'>
+            <img src='./WLUD_white.png' alt='' />
+          </div>
+          <div class='smedia-links'>
+            <div class='media-container'>
+              <p class='stay_tuned'>Stay tuned!</p>
+              <div class='ics'>
+                <a
+                  href='https://www.linkedin.com/company/wlug-club/'
+                  id='linkedin'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <i class='fa-brands fa-linkedin'></i>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='22'
+                    fill='rgba(255,255,255,0.4)'
+                    class='bi bi-linkedin'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z' />
+                  </svg>
+                </a>
+                <a
+                  href='https://instagram.com/wcewlug?igshid=YmMyMTA2M2Y='
+                  id='instagram'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <i class='fa-brands fa-instagram'></i>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='22'
+                    fill='rgba(255,255,255,0.4)'
+                    class='bi bi-instagram'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z' />
+                  </svg>
+                </a>
+                <a
+                  href='https://github.com/Walchand-Linux-Users-Group'
+                  id='github'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <i class='fa-brands fa-github'></i>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='22'
+                    fill='rgba(255,255,255,0.4)'
+                    class='bi bi-github'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z' />
+                  </svg>
+                </a>
+                <a
+                  href='https://mobile.twitter.com/wcewlug'
+                  id='twitter'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <i class='fa-brands fa-twitter'></i>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='22'
+                    fill='rgba(255,255,255,0.4)'
+                    class='bi bi-twitter'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z' />
+                  </svg>
+                </a>
+              </div>
+              <div class='copryright'>
+                <p>&#169; 2024 WCEWLUG, ALL RIGHTS RESERVED</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="two-two" id="four">
-            <div class="lft-two">
-                 <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#e04428" d="M41.5,-59.5C49.8,-51.1,49.7,-33.6,50.7,-19.2C51.7,-4.7,53.8,6.7,52.4,18.9C51.1,31.1,46.3,44.1,36.9,52.9C27.6,61.8,13.8,66.5,-2.5,70C-18.8,73.4,-37.7,75.6,-52.5,68.5C-67.3,61.5,-78.2,45.2,-84.5,27.1C-90.9,9,-92.7,-10.8,-80.5,-19.3C-68.3,-27.8,-42.1,-24.8,-26.3,-30.8C-10.6,-36.8,-5.3,-51.7,5.7,-59.5C16.6,-67.3,33.2,-68,41.5,-59.5Z" transform="translate(100 100)" />
-                  </svg>  -->
+        <div class='navigation'>
+          <div class='navli'>
+            <a href='#home'>Home</a>
+            <a href='https://www.wcewlug.org/' target='_blank' rel='noreferrer'>
+              About Us
+            </a>
+            <a href='#register'>Register</a>
+          </div>
+          <div class='policies'>
+            <div>
+              <a
+                href='https://wiki.wcewlug.org/policies/privacy-policy'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Privacy Policy
+              </a>
+              <p>&nbsp; | &nbsp;</p>
             </div>
-            <div class="rght-two">
-                <h1>Go</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, excepturi sed, itaque placeat id natus soluta veniam obcaecati qui a laborum laboriosam dolorem illum labore sit, voluptates commodi neque dolores tempore temporibus deleniti? Nobis, ratione hic error quis cum neque nulla laudantium nostrum sit nihil dolorum quisquam enim quaerat, eaque ex sequi, harum totam quia non! Labore, neque! Amet voluptatem illo similique recusandae! Ex quaerat quibusdam asperiores, ducimus tempore magni labore. Tenetur voluptas, quos ex repellendus provident mollitia laboriosam adipisci alias a impedit, cum accusamus rerum delectus eaque facilis veniam quia laborum incidunt ea assumenda! Eos magni aspernatur quod distinctio.</p>
+            <div>
+              <a
+                href='https://wiki.wcewlug.org/policies/terms-and-conditions'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Terms and Conditions
+              </a>
+              <p>&nbsp; | &nbsp;</p>
             </div>
+            <div>
+              <a
+              href='https://wiki.wcewlug.org/policies/cancellation-refund-policy'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Cancellation/Refund Policy&nbsp;
+            </a>
+            </div>
+          </div>
         </div>
-        <!-- <div class="three">
-            <div class="card">
-                <img class="lemon lemon1" src="Assets/lemon.webp" alt="">
-                <img id="cocacola" src="Assets/cocacola.png" alt="">
-                <h1>CocaCola</h1>
-                <button>Buy Now</button>
-            </div>
-            <div class="card">
-                <h1>Fanta</h1>
-                <button>Buy Now</button>
-            </div>
-            <div class="card">
-                <img class="lemon lemon2" src="Assets/lemon.webp" alt="">
-                <img id="pepsi" src="Assets/pepsi.png" alt="">
-                <h1>Pepsi</h1>
-                <button>Buy Now</button>
-            </div>
-        </div> -->
+      </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-</body>
+    <!-- 💁 Include both scripts below to support all browsers! -->
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </body>
 </html>
