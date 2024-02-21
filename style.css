@@ -1,235 +1,301 @@
 * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
+
 @font-face {
-    font-family: 'Blackpast';
-    src: url('./fonts/ttf/blackpast-blackpast-400.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Blackpast';
+  src: url('./fonts/ttf/blackpast-blackpast-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "HeliosRegular";
+  src: url("/helios-regular.ttf") format("truetype");
+  /* You can also provide other font formats for better browser compatibility */
+}
+
 body {
-    background: rgb(35, 4, 57);
-    background: linear-gradient(90deg, rgba(35, 4, 57, 1) 0%, rgba(79, 22, 121, 1) 52%, rgba(57, 5, 75, 1) 100%);
-    align-items: center;
-    
+  /* background: rgba(35, 4, 57,0.5); */
+  /* background: linear-gradient(90deg, rgba(35, 4, 57, 1) 0%, rgba(79, 22, 121, 1) 52%, rgba(57, 5, 75, 1) 100%); */
+  align-items: center;
+  /* background-image: url("./bgg.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: "fixed";
+  height: 100vh;
+  /* position: fixed; */
+
 }
-.header{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-    justify-content: center;
-    font-size: 7em;
-    font-weight:900;
-    font-family: 'Blackpast', sans-serif;
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 7em;
+  font-weight: 900;
+  font-family: 'Blackpast', sans-serif;
+  z-index: 100000;
+  /* font-family: "HeliosRegular", Arial, sans-serif; */
+  color: #d3c1e7;
 }
-.header img{
-    position: relative;
+
+.header img {
+  position: relative;
 }
-#docker{
-    position: absolute;
-    top: 5%;
-    left: 0;
-    width: 400px;
+
+#docker {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 400px;
 }
-#golang{
-    position: absolute;
-    width: 300px;
-    bottom: 0;
-    right: 0;
+
+#golang {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  right: 0;
 }
+
 /*Navbar starts*/
 .nav_elements {
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
-    width: max-content;
-    left: 50%;
-    gap: 1rem;
-    padding:  1rem;
-    position: fixed;
-    justify-content: space-around;
-    /* height: 3rem; */
-    backdrop-filter: blur(15px);
-    transform: translateX(-50%);
-    align-items: center;
-    animation-name: navAnimation;
-    animation-fill-mode: forwards;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    font-size: 2rem;
-    z-index: 1;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  width: max-content;
+  left: 50%;
+  gap: 1rem;
+  padding: 1rem;
+  position: fixed;
+  justify-content: space-around;
+  /* height: 3rem; */
+  backdrop-filter: blur(15px);
+  transform: translateX(-50%);
+  align-items: center;
+  animation-name: navAnimation;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  font-size: 2rem;
+  z-index: 10000000000;
+
+
 }
 
 nav .nav_elements a {
-    font-size: 1.1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3em;
-    padding: 0.5rem;
-    border-radius: 1.5rem;
-    background: transparent;
-    color: black;
-    text-decoration: none;
-    
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  background: transparent;
+  /* color: black; */
+  color: #d3c1e7;
+  text-decoration: none;
+  font-family: "HeliosRegular", Arial, sans-serif;
+
 
 }
 
-nav  a:hover {
-    background: rgba(0, 0, 0, 0.3);
-    /* border-radius: 1.5rem; */
+.containers {
+  position: inherit;
+  z-index: 2;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  /* border-radius: 1.5rem; */
 }
 
 nav a svg {
-    width: 1.6em;
+  width: 1.6em;
+
 }
 
 @keyframes navAnimation {
-    0% {
-        bottom: 0;
-    }
+  0% {
+    bottom: 0;
+  }
 
-    100% {
-        bottom: 5rem;
-    }
+  100% {
+    bottom: 5rem;
+  }
 }
 
 
 /*Navbar ends*/
 .go_container,
 .docker_container {
-    display: flex;
-    width: 90%;
-    margin: 0.5em auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rgba(255,255,255,0.2); */
-    /* backdrop-filter: blur(15px); */
-    border-radius: 15px;
-    padding: 0em 2em;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  width: 90%;
+  margin: 0.5em auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(255,255,255,0.2); */
+  /* backdrop-filter: blur(15px); */
+  border-radius: 15px;
+  padding: 0em 2em;
 }
 
 model-viewer {
-    width: 50%;
-    height: 80vh;
+  width: 50%;
+  height: 80vh;
 }
-.containers{
-    width: 100%;
-    margin: 0;
-    padding: 0;
+
+.containers {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 .go_session,
 .docker_session {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    font-family: "Ubuntu";
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  transition: all 0.8s ease-in-out;
+  padding: 1.4em;
+  background-color: rgba(10, 4, 35, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 1em;
+  color: #d3c1e7;
 }
-.docker_session{
-    width: 60%;
+
+.go_session:hover,
+.docker_session:hover {
+  background-color: rgba(10, 4, 35, 0.9);
+  backdrop-filter: blur(20px);
 }
+
+/* 
+.docker_session {
+  width: 60%;
+} */
+
+.go_session1,
+.go_session2,
+.docker_session1,
+.docker_session2 {
+  font-family: "HeliosRegular", Arial, sans-serif;
+}
+
 .go_session1 h1,
 .go_session2 h1,
 .docker_session1 h1,
 .docker_session2 h1 {
-    font-size: 3em;
+  font-family: "HeliosRegular", Arial, sans-serif;
+  font-size: 3em;
+  color: #d3c1e7;
 }
 
 .go_session1 p,
 .go_session2 p,
 .docker_session1 p,
 .docker_session2 p {
-    font-size: 1.2em;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 1.5em;
-    padding: 1.5em;
-    margin: 0.3em ;
-    transition: all 0.5s ease-in-out;
-}
-.go_session1 p:hover,
-.go_session2 p:hover,
-.docker_session1 p:hover,
-.docker_session2 p:hover{
-    background-color: rgba(255, 255, 255, 0.4);
+  font-size: 1.2em;
+  color: #d3c1e7;
+  border-radius: 1.5em;
+  padding:1em 0em;
+  margin: 0.3em;
+  transition: all 0.5s ease-in-out;
 }
 
 
 @media screen and (max-width: 600px) {
-    nav a svg {
-        width: 1.5em;
-    }
+  nav a svg {
+    width: 1.5em;
+  }
 
-    nav a {
-        font-size: 0.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        padding: 0.5rem;
-        border-radius: 1rem;
-        background: transparent;
-        color: black;
-        text-decoration: none;
+  nav a {
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    }
-    .nav_elements {
-        width: 90%;
-        margin: auto;
-        gap: 0.1rem;
-        justify-content: space-between;
-    }
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: transparent;
+    color: black;
+    text-decoration: none;
 
-    .go_container {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-    .docker_container{
-        width: 100%;
-        padding: 0;
-        flex-direction: column-reverse;
-    }
+  }
 
-    .go_session,
-    .docker_session {
-        width: 90%;
-    }
-    model-viewer{
-        width: 80%;
-        height: 50vh;
-    }
+  .nav_elements {
+    width: 90%;
+    margin: auto;
+    gap: 0.1rem;
+    justify-content: space-between;
+  }
 
-    .header{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        flex-direction:column;
-        justify-content: center;
-        font-size: 2em;
-        font-weight:900;
-        font-family: 'Blackpast', sans-serif;
-    }
-    .header img{
-        position: relative;
-    }
-    #docker{
-        position: relative;
-        width: 200px;
-    }
-    #golang{
-        position: relative;
-        width: 200px;
-    }
+  .go_container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .docker_container {
+    width: 100%;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+
+  .go_session,
+  .docker_session {
+    width: 90%;
+  }
+
+  model-viewer {
+    width: 80%;
+    height: 50vh;
+  }
+
+  .header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 900;
+    font-family: 'Blackpast', sans-serif;
+    
+  }
+
+
+
+  #docker {
+    position: relative;
+    width: 200px;
+  }
+
+  #golang {
+    position: relative;
+    width: 200px;
+  }
+
+  .go_session1 p,
+  .go_session2 p,
+  .docker_session1 p,
+  .docker_session2 p {
+    padding: 0.5em;
+
+  }
 }
 
 
@@ -238,7 +304,6 @@ model-viewer {
 .footer {
   display: flex;
   flex-direction: row;
-  background-color: rgba(37, 37, 37,1);
   align-items: center;
   flex-wrap: wrap;
   row-gap: 4rem;
@@ -247,7 +312,8 @@ model-viewer {
   padding: 4rem 0;
   border-radius: 1em;
   position: relative;
-  z-index: 5;
+  z-index: 10000000000000;
+  background-color: rgba(10, 4, 35, 2);
 }
 
 .logo-icon-container {
@@ -281,6 +347,7 @@ model-viewer {
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
 }
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -303,13 +370,15 @@ model-viewer {
 }
 
 .navli a,
-.policies div a,.ics a:hover {
+.policies div a,
+.ics a:hover {
   text-decoration: none;
   text-align: center;
   color: rgba(255, 255, 255, 0.4);
 }
-.policies div a{
-    color: white;
+
+.policies div a {
+  color: white;
 }
 
 .navli a:hover,
@@ -348,6 +417,7 @@ model-viewer {
   .logo-icon-container {
     width: 55%;
   }
+
   .footer {
     column-gap: 2rem;
     padding-left: 2rem;
@@ -368,40 +438,50 @@ model-viewer {
     flex-wrap: wrap;
     gap: 1em;
   }
+
   .navli {
     font-size: 1.2rem;
   }
+
   .wlug-logo {
     width: 14rem;
   }
+
   .stay_tuned {
     font-size: 1.4rem;
   }
+
   .copryright p {
     font-size: 0.9rem;
   }
 }
+
 @media only screen and (max-width: 680px) {
   .footer {
     justify-content: space-between;
     padding: 4rem 3rem;
   }
+
   .logo-icon-container {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+
   .wlug-logo {
     display: none;
   }
+
   .navigation {
     align-items: flex-end;
     width: 100%;
   }
+
   .navli {
     justify-content: flex-end;
     margin-bottom: 1rem;
     gap: 1.5em;
   }
+
   .policies {
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -412,20 +492,25 @@ model-viewer {
   .footer {
     padding: 4rem 2rem;
   }
+
   .navli {
     font-size: 1.05rem;
     justify-content: center;
   }
+
   .navigation {
     align-items: center;
   }
+
   .stay_tuned {
     font-size: 1.3rem;
   }
+
   .policies {
     font-size: 0.95rem;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .navli {
     gap: 1em;
@@ -433,3 +518,15 @@ model-viewer {
 }
 
 /*Footer End*/
+
+.bg-image img {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  /* z-index: -9999999999999; */
+}
+
+.bg-image {
+  width: 100%;
+  height: 100vh;
+}
