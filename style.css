@@ -45,7 +45,12 @@ body {
   /* font-family: "HeliosRegular", Arial, sans-serif; */
   color: #d3c1e7;
 }
-
+.club_name{
+  font-size: 0.3em;
+}
+.presents{
+  font-size: 0.2em;
+}
 .header img {
   position: relative;
 }
@@ -152,7 +157,7 @@ nav a svg {
 }
 
 model-viewer {
-  width: 50%;
+  width: 33%;
   height: 80vh;
 }
 
@@ -165,18 +170,20 @@ model-viewer {
 .go_session,
 .docker_session {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 66%;
+  justify-content: space-between;
   transition: all 0.8s ease-in-out;
   padding: 1.4em;
-  background-color: rgba(10, 4, 35, 0.5);
-  backdrop-filter: blur(8px);
+  
   border-radius: 1em;
   color: #d3c1e7;
+
 }
 
-.go_session:hover,
-.docker_session:hover {
+.go_session1:hover,.go_session2:hover,.docker_session2:hover,
+.docker_session1:hover {
   background-color: rgba(10, 4, 35, 0.9);
   backdrop-filter: blur(20px);
 }
@@ -190,7 +197,13 @@ model-viewer {
 .go_session2,
 .docker_session1,
 .docker_session2 {
+  padding: 1em;
+  width: 44%;
+  margin: 1em 0em;
+  background-color: rgba(10, 4, 35, 0.5);
+  backdrop-filter: blur(8px);
   font-family: "HeliosRegular", Arial, sans-serif;
+  transition: all 0.4s ease-in-out;
 }
 
 .go_session1 h1,
@@ -244,19 +257,21 @@ model-viewer {
 
   .go_container {
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     padding: 0;
   }
 
   .docker_container {
-    width: 100%;
-    padding: 0;
+    width: 90%;
+    margin: auto;
     flex-direction: column-reverse;
   }
 
   .go_session,
   .docker_session {
-    width: 90%;
+    flex-direction: column;
+    width: 100%;
   }
 
   model-viewer {
@@ -294,7 +309,13 @@ model-viewer {
   .docker_session1 p,
   .docker_session2 p {
     padding: 0.5em;
-
+  }
+  .go_session1 ,
+  .go_session2 ,
+  .docker_session1 ,
+  .docker_session2 {
+    width: 95%;
+    margin: 1em auto;
   }
 }
 
